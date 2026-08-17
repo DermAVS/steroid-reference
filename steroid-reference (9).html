@@ -200,6 +200,21 @@ header p{font-size:.75rem;opacity:.7;margin-top:2px}
 .taper-card h3{font-size:1.05rem;font-weight:700;margin:0 0 4px;line-height:1.3}
 .taper-subtitle-text{font-size:.8rem;color:var(--muted);margin:0 0 16px;line-height:1.4}
 
+
+.compact-details{margin-top:8px;border-top:1px solid var(--border);padding-top:7px;font-size:.72rem;color:#475569}
+.compact-details summary{cursor:pointer;color:var(--primary);font-weight:700;list-style:none}
+.compact-details summary::-webkit-details-marker{display:none}
+.compact-details summary::before{content:"▸ ";font-size:.72rem}
+.compact-details[open] summary::before{content:"▾ "}
+.compact-details > div{margin-top:7px;line-height:1.45}
+
+
+.dx-plan{margin-top:9px;border-top:1px solid var(--border);padding-top:9px}
+.dx-row{display:grid;grid-template-columns:145px 1fr;gap:8px;padding:5px 0;font-size:.75rem;line-height:1.45}
+.dx-label{font-weight:700;color:var(--muted)}
+.dx-value{color:var(--text)}
+@media(max-width:500px){.dx-row{grid-template-columns:1fr;gap:2px}}
+
 /* ── Full steroid table ── */
 .full-table-outer{max-width:1280px;margin:0 auto 24px;padding:0 24px}
 .full-table-section{background:var(--card);border-radius:16px;padding:22px;
@@ -229,6 +244,48 @@ header p{font-size:.75rem;opacity:.7;margin-top:2px}
 .sc-brands-cell{color:#6366f1;font-style:italic;white-space:nowrap}
 .no-results-row td{text-align:center;color:var(--muted);padding:20px;font-size:.8rem}
 
+
+/* ── Prescribing decision support ── */
+
+.peds-banner{border-left:3px solid #10b981;background:#f0fdf4;color:#065f46;border-radius:7px;padding:7px 10px;margin:8px 0;font-size:.72rem;line-height:1.4}
+.peds-banner strong{font-weight:800}
+
+.quantity-card{margin-top:10px;border-top:1px solid #d1fae5;border-bottom:1px solid #d1fae5;background:#f8fffb;padding:10px 2px}
+.quantity-title{font-size:.66rem;font-weight:800;color:#047857;text-transform:uppercase;letter-spacing:.07em}
+.quantity-main{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.quantity-number{padding:5px 0}
+.quantity-number .q-label{font-size:.62rem;color:#64748b;text-transform:uppercase;font-weight:700}
+.quantity-number .q-value{font-size:1.03rem;font-weight:800;color:#14532d;margin-top:2px}
+.quantity-explain{font-size:.72rem;line-height:1.45;color:#475569;margin-top:9px}
+@media(max-width:500px){.quantity-main{grid-template-columns:1fr}}
+
+.peds-caution{border:1px solid #fde68a;background:#fffbeb;color:#92400e;border-radius:9px;padding:9px 11px;margin-top:10px;font-size:.76rem;line-height:1.45}
+
+.decision-topline{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}
+.risk-pill{font-size:.68rem;font-weight:700;border-radius:999px;padding:6px 10px;background:#e2e8f0;color:#334155;white-space:nowrap}
+.decision-controls{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:10px;margin-bottom:12px}
+.decision-controls label{font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.decision-controls select{display:block;width:100%;margin-top:5px;border:1px solid var(--border);border-radius:8px;padding:8px 9px;background:#fff;color:var(--text);font-size:.8rem;text-transform:none;letter-spacing:0}
+.rx-card{border:2px solid #bfdbfe;background:#eff6ff;border-radius:12px;padding:14px;margin-top:12px}
+.rx-kicker{font-size:.66rem;font-weight:800;color:#1d4ed8;text-transform:uppercase;letter-spacing:.07em}
+.rx-drug{font-size:1.07rem;font-weight:800;color:#172554;margin-top:3px}
+.rx-line{font-size:.83rem;line-height:1.55;margin-top:7px;color:#1e3a8a}
+.rx-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.rx-meta-item{background:#fff;border-radius:8px;padding:8px 9px;border:1px solid #dbeafe}
+.rx-meta-label{font-size:.61rem;color:#64748b;text-transform:uppercase;font-weight:700}
+.rx-meta-value{font-size:.77rem;font-weight:700;margin-top:2px}
+.choice-grid{display:block;margin-top:9px}
+.choice-card{padding:4px 0;background:transparent}
+.choice-title{display:inline;font-size:.68rem;color:var(--muted);font-weight:700}
+.choice-drug{display:inline;font-size:.76rem;font-weight:600;margin-left:4px}
+.choice-card + .choice-card{margin-top:2px}
+.site-note{margin-top:9px;padding:7px 0;font-size:.75rem;line-height:1.45;color:#475569}
+.no-rx{border:2px solid #fecaca;background:#fef2f2;color:#991b1b;border-radius:12px;padding:14px;margin-top:12px;font-size:.82rem;line-height:1.55}
+.fingertip-box{margin-top:12px;border:1px solid #cbd5e1;border-radius:10px;padding:11px 12px;background:#f8fafc;font-size:.77rem;line-height:1.5}
+.small-muted{font-size:.7rem;color:var(--muted);margin-top:5px;line-height:1.45}
+@media(max-width:900px){.decision-controls{grid-template-columns:1fr 1fr}.decision-controls label:first-child{grid-column:1/-1}}
+@media(max-width:500px){.decision-controls,.rx-meta,.choice-grid{grid-template-columns:1fr}}
+
 /* Responsive */
 @media(max-width:820px){
   .layout{flex-direction:column;padding:12px}
@@ -253,14 +310,14 @@ header p{font-size:.75rem;opacity:.7;margin-top:2px}
     </svg>
   </div>
   <div>
-    <h1>Topical Steroid Potency Reference</h1>
-    <p>Body-site guidance · Potency classification · Taper protocols</p>
+    <h1>Topical Steroid Prescribing Guide</h1>
+    <p>Body site · Diagnosis · Severity · Practical prescriptions</p>
   </div>
-  <div class="header-badge">🩺 Clinical Reference Tool</div>
+  <div class="header-badge">🩺 Prescribing Decision Support</div>
 </header>
 
 <div class="disclaimer">
-  ⚠️ For educational and clinical reference use only. All treatment decisions must be made by a qualified healthcare provider based on individual patient assessment.
+  ⚠️ Clinical decision support for qualified healthcare professionals. Confirm the diagnosis, patient factors, product labeling, and local formulary before prescribing.
 </div>
 
 <div class="layout">
@@ -456,7 +513,7 @@ header p{font-size:.75rem;opacity:.7;margin-top:2px}
 
     <!-- LEGEND -->
     <div class="legend">
-      <div class="panel-title" style="margin-top:12px">Max Recommended Potency</div>
+      <div class="panel-title" style="margin-top:12px">Potency Reference</div>
       <div class="legend-grid" id="legend-grid"></div>
     </div>
   </div>
@@ -467,24 +524,18 @@ header p{font-size:.75rem;opacity:.7;margin-top:2px}
     <!-- Welcome state -->
     <div class="welcome-card" id="welcome-card">
       <div class="welcome-intro">
-        <h2>About This Reference Tool</h2>
-        <p>Topical corticosteroids are among the most commonly prescribed treatments for
-          inflammatory skin conditions — including eczema, psoriasis, seborrheic dermatitis,
-          and allergic contact dermatitis. They work by calming inflammation, itching, and
-          redness, but the right strength depends heavily on where on the body they're
-          applied: skin thickness and absorption vary widely from one region to another,
-          so a potency that's safe on the sole of the foot could cause thinning and
-          irritation on the eyelid.</p>
-        <p>This tool organizes topical steroids into seven potency classes — from
-          <strong>Class I</strong> (super high potency) to <strong>Class VII</strong>
-          (least potent) — and maps out which classes are appropriate for each body site.
-          Selecting any region below will show you:</p>
+        <h2>Choose the site first — then prescribe with context</h2>
+        <p>Topical corticosteroid selection should reflect <strong>body site, diagnosis, severity,
+        lesion thickness, age, treatment area, and duration</strong>. Thin or occluded skin generally
+        needs lower potency; thick plaques on scalp, palms, and soles often need stronger therapy.</p>
+        <p>This tool is designed to answer the practical question: <strong>“What could I reasonably
+        prescribe here, and how should I write it?”</strong></p>
         <ul>
-          <li>Steroid names appropriate for that body site</li>
-          <li>A step-down tapering schedule for reducing potency safely</li>
+          <li>Select a body site.</li>
+          <li>Choose the suspected diagnosis and severity.</li>
+          <li>Review a preferred prescription, duration, quantity guidance, alternatives, and stop rules.</li>
         </ul>
-        <p>A complete table of every steroid across all seven classes is also available
-          at the bottom of the page.</p>
+        <p>The full Class I–VII table remains available below as an advanced reference.</p>
       </div>
 
       <hr class="welcome-divider">
@@ -492,29 +543,64 @@ header p{font-size:.75rem;opacity:.7;margin-top:2px}
       <div class="welcome-cta">
         <div class="welcome-icon">🗺️</div>
         <h2>Select a body region to begin</h2>
-        <p>Click any area on the body map to view the steroids and taper guidance for that site.</p>
+        <p>Click any area on the body map to start a site-specific prescribing recommendation.</p>
         <div class="welcome-hints">
           <span class="hint-chip">Class I–VII steroids</span>
-          <span class="hint-chip">Site-specific selection</span>
-          <span class="hint-chip">Taper schedules</span>
+          <span class="hint-chip">Diagnosis-aware</span>
+          <span class="hint-chip">Prescription-ready</span>
         </div>
       </div>
     </div>
 
-    <!-- Region info card (hidden until selection) -->
+    <!-- Clinical decision card -->
     <div class="region-card" id="region-card">
-      <h2 id="rc-name">—</h2>
-      <div class="section-label" style="margin-top:0">Steroids for this site</div>
-      <ul class="steroid-name-list" id="rc-steroid-list"></ul>
-    </div>
+      <div class="decision-topline">
+        <div>
+          <div class="panel-title">Selected site</div>
+          <h2 id="rc-name">—</h2>
+        </div>
+        <div class="risk-pill" id="site-risk-pill">Typical absorption</div>
+      </div>
 
-    <!-- Taper guidance card -->
-    <div class="taper-card" id="taper-card">
-      <h3>Tapering guidance</h3>
-      <p id="taper-subtitle" class="taper-subtitle-text">Site-specific tapering protocol</p>
-      <div class="taper-steps" id="taper-steps"></div>
+      <div class="decision-controls">
+        <label>Diagnosis
+          <select id="diagnosis-select">
+            <option value="eczema">Eczema / dermatitis</option>
+            <option value="contact">Allergic / irritant contact dermatitis</option>
+            <option value="psoriasis">Psoriasis</option>
+            <option value="sebderm">Seborrheic dermatitis</option>
+            <option value="lichen">Lichen simplex / thick chronic dermatitis</option>
+            <option value="bite">Inflammatory bite / localized reaction</option>
+            <option value="unsure">Unsure of diagnosis</option>
+          </select>
+        </label>
+        <label>Severity / thickness
+          <select id="severity-select">
+            <option value="mild">Mild / thin</option>
+            <option value="moderate" selected>Moderate</option>
+            <option value="severe">Severe / thick</option>
+          </select>
+        </label>
+        <label>How much of this region?
+          <select id="extent-select">
+            <option value="0.1">Small localized area (~10%)</option>
+            <option value="0.25">About 1/4 of region</option>
+            <option value="0.5" selected>About 1/2 of region</option>
+            <option value="1">Most / all of region</option>
+            <option value="2">Bilateral / both sides</option>
+          </select>
+        </label>
+        <label>Patient
+          <select id="age-select">
+            <option value="adult" selected>Adult</option>
+            <option value="child">Child (2–17 years)</option>
+            <option value="infant">Infant / toddler (&lt;2 years)</option>
+            <option value="elderly">Older adult / fragile skin</option>
+          </select>
+        </label>
+      </div>
+<div id="rx-output"></div>
     </div>
-
   </div><!-- end info-section -->
 </div><!-- end layout -->
 
@@ -523,7 +609,7 @@ header p{font-size:.75rem;opacity:.7;margin-top:2px}
   <div class="full-table-section">
     <div class="full-table-header">
       <div>
-        <div class="panel-title" style="margin-bottom:2px">Full Reference</div>
+        <div class="panel-title" style="margin-bottom:2px">Advanced Reference</div>
         <h2 id="full-table-heading">All Steroids by Class</h2>
       </div>
       <input type="text" id="steroid-search" class="steroid-search-input"
@@ -842,6 +928,262 @@ const REGIONS = {
   }
 };
 
+
+const SITE_RX = {
+  scalp:{risk:'Typical–low', base:2, preferred:'Fluocinonide 0.05% solution', mild:'Fluocinolone 0.01% solution/oil', strong:'Clobetasol 0.05% solution or foam', vehicle:'solution/foam for hair-bearing scalp', duration:'1–2 weeks', quantity:'60 mL', note:'Scalp disease often needs a potent vehicle that reaches skin through hair. Rule out tinea capitis when scale is atypical, focal, or associated with alopecia.'},
+  face:{risk:'High', base:6, preferred:'Desonide 0.05% cream or ointment', mild:'Hydrocortisone 1–2.5%', strong:'Do not routinely escalate without a diagnosis-specific reason', vehicle:'cream for daytime; ointment for very dry dermatitis', duration:'5–14 days', quantity:'15–30 g', note:'Prefer low-potency therapy. Avoid prolonged medium/high-potency steroid use because of atrophy, telangiectasia, steroid rosacea, and perioral dermatitis.'},
+  eyelids:{risk:'Very high', base:7, preferred:'Hydrocortisone 1% ointment', mild:'Hydrocortisone 1% ointment', strong:'Consider tacrolimus/pimecrolimus or specialist evaluation rather than stronger steroid', vehicle:'ointment', duration:'3–7 days', quantity:'15 g', note:'Periocular skin is very thin. Avoid prolonged or repeated exposure; recurrent disease deserves a steroid-sparing plan.'},
+  neck:{risk:'High', base:6, preferred:'Desonide 0.05% cream', mild:'Hydrocortisone 2.5% cream', strong:'Triamcinolone 0.025% briefly on non-fold skin if clearly needed', vehicle:'cream', duration:'7–14 days', quantity:'30 g', note:'Neck and folds are steroid-sensitive. Treat neck creases more like intertriginous skin.'},
+  chest:{risk:'Typical', base:4, preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025% or hydrocortisone 2.5%', strong:'Fluocinonide 0.05% for a short course on thick/severe lesions', vehicle:'ointment for dry eczema; cream if preferred', duration:'7–14 days', quantity:'30–80 g', note:'A medium-potency steroid is a practical default for uncomplicated inflammatory dermatitis of the trunk.'},
+  abdomen:{risk:'Typical', base:4, preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025% or hydrocortisone 2.5%', strong:'Fluocinonide 0.05% for a short course on thick/severe lesions', vehicle:'ointment for dry eczema; cream if preferred', duration:'7–14 days', quantity:'30–80 g', note:'Use less potent therapy near folds/umbilicus and avoid prolonged potent treatment over large areas.'},
+  'upper-back':{risk:'Typical', base:4, preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025%', strong:'Fluocinonide 0.05% for thick/severe disease', vehicle:'ointment or cream', duration:'7–14 days', quantity:'30–80 g', note:'Medium potency is a reasonable default for most inflammatory dermatoses on the back.'},
+  'lower-back':{risk:'Typical', base:4, preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025%', strong:'Fluocinonide 0.05% for thick/severe disease', vehicle:'ointment or cream', duration:'7–14 days', quantity:'30–80 g', note:'Treat the intergluteal cleft as a fold rather than as ordinary back skin.'},
+  axillae:{risk:'Very high', base:7, preferred:'Hydrocortisone 2.5% cream', mild:'Hydrocortisone 1% cream', strong:'Desonide 0.05% briefly if needed', vehicle:'cream', duration:'5–10 days', quantity:'15–30 g', note:'Occlusion increases exposure. Rule out candidiasis/tinea and avoid prolonged potent steroids because striae and atrophy can be permanent.'},
+  'upper-arm':{risk:'Typical', base:4, preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025%', strong:'Fluocinonide 0.05% for thick/severe disease', vehicle:'ointment or cream', duration:'7–14 days', quantity:'30–60 g', note:'Do not apply the same potency automatically into the antecubital crease; flexures need lower potency.'},
+  forearm:{risk:'Typical', base:4, preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025%', strong:'Fluocinonide 0.05% for thick/severe disease', vehicle:'ointment or cream', duration:'7–14 days', quantity:'30–60 g', note:'Older adults often have fragile forearm skin; step down potency when purpura or marked atrophy is present.'},
+  'hand-palm':{risk:'Low', base:1, preferred:'Clobetasol 0.05% ointment', mild:'Fluocinonide 0.05% ointment', strong:'Clobetasol 0.05% ointment', vehicle:'ointment', duration:'1–2 weeks', quantity:'30–60 g', note:'Palmar stratum corneum is thick, so low-potency steroids often fail. Avoid prolonged continuous Class I use.'},
+  'hand-dorsum':{risk:'Typical', base:4, preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025%', strong:'Fluocinonide 0.05% briefly', vehicle:'ointment or cream', duration:'7–14 days', quantity:'30 g', note:'Dorsal hand skin can be quite fragile in older adults. Treat web spaces as folds.'},
+  groin:{risk:'Very high', base:7, preferred:'Hydrocortisone 2.5% cream', mild:'Hydrocortisone 1% cream', strong:'Diagnosis-specific exception — do not escalate empirically', vehicle:'cream', duration:'5–10 days', quantity:'15–30 g', note:'Rule out tinea/candidiasis. Routine dermatitis generally needs low potency, but selected genital dermatoses can require potent therapy under a diagnosis-specific regimen.'},
+  antecubital:{risk:'High', base:6, preferred:'Desonide 0.05% cream or ointment', mild:'Hydrocortisone 2.5%', strong:'Triamcinolone 0.025% briefly if severe', vehicle:'cream or ointment', duration:'7–14 days', quantity:'15–30 g', note:'Flexural skin has higher exposure. Recurrent disease often benefits from a steroid-sparing maintenance strategy.'},
+  thigh:{risk:'Typical', base:4, preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025%', strong:'Fluocinonide 0.05% for thick/severe lesions', vehicle:'ointment or cream', duration:'7–14 days', quantity:'30–80 g', note:'Treat the inner thigh crease/inguinal fold as intertriginous skin and use lower potency there.'},
+  popliteal:{risk:'High', base:6, preferred:'Desonide 0.05% cream or ointment', mild:'Hydrocortisone 2.5%', strong:'Triamcinolone 0.025% briefly if severe', vehicle:'cream or ointment', duration:'7–14 days', quantity:'15–30 g', note:'A classic flexural eczema site; recurrent disease should have a long-term maintenance plan rather than repeated escalation.'},
+  'lower-leg':{risk:'Typical', base:4, preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025%', strong:'Fluocinonide 0.05% for thick/severe disease', vehicle:'ointment', duration:'7–14 days', quantity:'30–80 g', note:'Use lower potency on fragile, atrophic, ulcer-prone, or markedly edematous lower-leg skin.'},
+  'foot-sole':{risk:'Low', base:1, preferred:'Clobetasol 0.05% ointment', mild:'Fluocinonide 0.05% ointment', strong:'Clobetasol 0.05% ointment', vehicle:'ointment', duration:'1–2 weeks', quantity:'30–60 g', note:'Plantar skin is thick and often needs high potency. Rule out tinea pedis before steroid monotherapy; never treat toe webs like the sole.'},
+  'foot-dorsum':{risk:'Typical', base:4, preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025%', strong:'Fluocinonide 0.05% briefly', vehicle:'ointment or cream', duration:'7–14 days', quantity:'30 g', note:'Treat toe web spaces as folds and rule out tinea when scaling is interdigital or annular.'},
+  gluteal:{risk:'Typical', base:4, preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025%', strong:'Fluocinonide 0.05% for thick/severe lesions', vehicle:'ointment or cream', duration:'7–14 days', quantity:'30–80 g', note:'The intergluteal cleft is a fold and should receive lower-potency therapy than the buttock surface.'}
+};
+
+
+
+// Approximate adult fingertip units (FTU) required per application when the
+// ENTIRE named region is treated. These are intentionally practical estimates
+// derived from standard FTU teaching (arm ≈3 FTU, leg ≈6 FTU,
+// face+neck ≈2.5 FTU, foot ≈2 FTU) and subdivided for this body map.
+const REGION_FTU = {
+  scalp:1.0, face:2.0, eyelids:0.25, neck:0.5,
+  chest:3.5, abdomen:3.5, 'upper-back':3.5, 'lower-back':3.5,
+  axillae:0.5, 'upper-arm':1.5, forearm:1.0, 'hand-palm':1.0,
+  'hand-dorsum':1.0, groin:1.0, antecubital:0.35,
+  thigh:3.0, popliteal:0.35, 'lower-leg':2.0,
+  'foot-sole':1.0, 'foot-dorsum':1.0, gluteal:2.0
+};
+
+const DISPENSE_SIZES = [15, 30, 45, 60, 80, 100, 120, 160, 240, 454];
+
+function parseCourseDays(durationText, age) {
+  const nums = (durationText.match(/\d+/g) || []).map(Number);
+  if (!nums.length) return age === 'infant' ? 5 : age === 'child' ? 7 : 14;
+  const maxNum = Math.max(...nums);
+  if (/week/i.test(durationText)) return maxNum * 7;
+  return maxNum;
+}
+
+function quantityEstimate(site, age, extent, frequencyPerDay) {
+  const regionFtu = REGION_FTU[selectedRegion] || 1;
+  // Adult male FTU ≈0.5 g. Pediatric FTU amount is lower; DermNet gives
+  // ~1/3 adult amount around age 4 and ~1/4 adult amount in late infancy.
+  // Because 2–17 spans a wide size range, use 0.65 as a deliberately
+  // approximate midpoint and clearly label the result as an estimate.
+  const gramsPerFtu = age === 'infant' ? 0.125 : age === 'child' ? 0.325 : 0.5;
+  const days = parseCourseDays(site.duration, age);
+  const raw = regionFtu * extent * gramsPerFtu * frequencyPerDay * days;
+  // Add 20% practical buffer for application variability/waste.
+  const buffered = raw * 1.20;
+  const minDispense = age === 'infant' ? 15 : 15;
+  const rounded = DISPENSE_SIZES.find(s => s >= Math.max(minDispense, buffered)) || 454;
+  return {
+    perApplication: regionFtu * extent * gramsPerFtu,
+    course: raw,
+    buffered,
+    dispense: rounded,
+    days
+  };
+}
+
+
+const PEDIATRIC_RX = {
+  child:{
+    scalp:{preferred:'Fluocinolone 0.01% solution or oil', mild:'Hydrocortisone 1–2.5% solution/lotion when practical', strong:'Fluocinonide 0.05% solution only for a short, localized course when clearly needed', duration:'5–10 days', quantity:'30–60 mL', note:'Avoid making ultra-high potency corticosteroids the default in children. Use the lowest potency that controls disease and reassess early.'},
+    face:{preferred:'Hydrocortisone 1% ointment or cream', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% briefly if hydrocortisone is inadequate', duration:'3–7 days', quantity:'15 g', note:'Use low potency on pediatric facial skin. For recurrent facial eczema, consider a steroid-sparing agent rather than repeated steroid courses.'},
+    eyelids:{preferred:'Hydrocortisone 1% ointment', mild:'Hydrocortisone 1% ointment', strong:'Do not escalate potency; consider tacrolimus/pimecrolimus or specialist input', duration:'3–5 days', quantity:'15 g', note:'Pediatric periocular skin is especially steroid-sensitive. Avoid repeated or prolonged periocular corticosteroid exposure.'},
+    neck:{preferred:'Hydrocortisone 1–2.5% cream', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% briefly if needed', duration:'5–7 days', quantity:'15–30 g', note:'Neck folds behave like intertriginous skin; keep potency low and duration short.'},
+    chest:{preferred:'Triamcinolone 0.025% ointment', mild:'Hydrocortisone 2.5% ointment', strong:'Triamcinolone 0.1% ointment for a short course if moderate/severe and clearly diagnosed', duration:'5–10 days', quantity:'30–60 g', note:'Children can require mid-potency therapy on the trunk, but start lower than the adult pathway and reassess sooner.'},
+    abdomen:{preferred:'Triamcinolone 0.025% ointment', mild:'Hydrocortisone 2.5% ointment', strong:'Triamcinolone 0.1% ointment for a short course if clearly needed', duration:'5–10 days', quantity:'30–60 g', note:'Avoid prolonged treatment over large surface areas because children have a higher surface-area-to-body-mass ratio.'},
+    'upper-back':{preferred:'Triamcinolone 0.025% ointment', mild:'Hydrocortisone 2.5%', strong:'Triamcinolone 0.1% ointment briefly if clearly needed', duration:'5–10 days', quantity:'30–60 g', note:'Use the lowest effective potency and reassess within about a week if not improving.'},
+    'lower-back':{preferred:'Triamcinolone 0.025% ointment', mild:'Hydrocortisone 2.5%', strong:'Triamcinolone 0.1% ointment briefly if clearly needed', duration:'5–10 days', quantity:'30–60 g', note:'Do not extend trunk-level potency into the intergluteal cleft; treat the cleft as a fold.'},
+    axillae:{preferred:'Hydrocortisone 1% cream', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% briefly if needed', duration:'3–7 days', quantity:'15 g', note:'Occlusion increases absorption. Rule out candidiasis/tinea and avoid medium/high-potency steroids in routine pediatric axillary dermatitis.'},
+    'upper-arm':{preferred:'Triamcinolone 0.025% ointment', mild:'Hydrocortisone 2.5%', strong:'Triamcinolone 0.1% briefly if severe', duration:'5–10 days', quantity:'30 g', note:'Use lower potency in the antecubital crease than on the outer arm.'},
+    forearm:{preferred:'Triamcinolone 0.025% ointment', mild:'Hydrocortisone 2.5%', strong:'Triamcinolone 0.1% briefly if severe', duration:'5–10 days', quantity:'30 g', note:'A lower-mid potency default is safer for children than the adult triamcinolone 0.1% default.'},
+    'hand-palm':{preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025% ointment', strong:'Fluocinonide 0.05% ointment for a short localized course if refractory', duration:'5–10 days', quantity:'15–30 g', note:'Palms may require stronger treatment, but clobetasol should not be the default pediatric recommendation.'},
+    'hand-dorsum':{preferred:'Triamcinolone 0.025% ointment', mild:'Hydrocortisone 2.5%', strong:'Triamcinolone 0.1% briefly', duration:'5–10 days', quantity:'15–30 g', note:'Keep stronger agents out of interdigital web spaces.'},
+    groin:{preferred:'Hydrocortisone 1% cream', mild:'Hydrocortisone 1%', strong:'Do not escalate empirically; confirm diagnosis or obtain specialist input', duration:'3–5 days', quantity:'15 g', note:'Pediatric genital and diaper-area skin is highly absorptive and often occluded. Rule out fungal disease before steroid monotherapy.'},
+    antecubital:{preferred:'Hydrocortisone 2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% or triamcinolone 0.025% briefly if needed', duration:'5–7 days', quantity:'15–30 g', note:'Flexural eczema is common in children; use low potency and consider steroid-sparing maintenance for recurrence.'},
+    thigh:{preferred:'Triamcinolone 0.025% ointment', mild:'Hydrocortisone 2.5%', strong:'Triamcinolone 0.1% briefly if severe', duration:'5–10 days', quantity:'30–60 g', note:'Treat the inguinal/inner-thigh crease as a fold and step down to low potency there.'},
+    popliteal:{preferred:'Hydrocortisone 2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% or triamcinolone 0.025% briefly if needed', duration:'5–7 days', quantity:'15–30 g', note:'Use low potency in pediatric flexures and develop a maintenance plan for recurrent eczema.'},
+    'lower-leg':{preferred:'Triamcinolone 0.025% ointment', mild:'Hydrocortisone 2.5%', strong:'Triamcinolone 0.1% briefly if severe', duration:'5–10 days', quantity:'30 g', note:'Use lower potency than the adult pathway unless disease severity clearly warrants escalation.'},
+    'foot-sole':{preferred:'Triamcinolone 0.1% ointment', mild:'Triamcinolone 0.025% ointment', strong:'Fluocinonide 0.05% ointment for a short localized course if refractory', duration:'5–10 days', quantity:'15–30 g', note:'Soles are thick, but ultra-high potency therapy should not be the default pediatric choice. Rule out tinea pedis.'},
+    'foot-dorsum':{preferred:'Triamcinolone 0.025% ointment', mild:'Hydrocortisone 2.5%', strong:'Triamcinolone 0.1% briefly', duration:'5–10 days', quantity:'15–30 g', note:'Treat toe webs as folds and rule out tinea.'},
+    gluteal:{preferred:'Triamcinolone 0.025% ointment', mild:'Hydrocortisone 2.5%', strong:'Triamcinolone 0.1% briefly if severe', duration:'5–10 days', quantity:'30–60 g', note:'Do not use buttock-level potency in the intergluteal cleft.'}
+  },
+
+  infant:{
+    scalp:{preferred:'Hydrocortisone 1% lotion/solution when feasible or clinician-directed fluocinolone 0.01% oil', mild:'Hydrocortisone 1%', strong:'Do not escalate without age-specific product labeling and clinician confidence', duration:'3–5 days', quantity:'15–30 mL', note:'Infants have proportionally greater systemic exposure. Use only low-potency or specifically age-appropriate products and very short courses.'},
+    face:{preferred:'Hydrocortisone 1% ointment', mild:'Hydrocortisone 1%', strong:'Do not escalate routinely; consider steroid-sparing/specialist guidance for recurrent disease', duration:'3–5 days', quantity:'15 g', note:'Keep infant facial therapy low potency and brief.'},
+    eyelids:{preferred:'Hydrocortisone 1% ointment only if clearly necessary', mild:'Hydrocortisone 1%', strong:'No potency escalation; consider specialist input', duration:'2–3 days', quantity:'15 g', note:'Avoid repeated periocular corticosteroid use in infants.'},
+    neck:{preferred:'Hydrocortisone 1% cream or ointment', mild:'Hydrocortisone 1%', strong:'Do not routinely exceed low potency', duration:'3–5 days', quantity:'15 g', note:'Infant neck folds are occluded and absorb medication readily.'},
+    chest:{preferred:'Hydrocortisone 1–2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% or other age-appropriate low-potency prescription only when clearly needed', duration:'3–7 days', quantity:'15–30 g', note:'Avoid routine mid/high-potency therapy over large infant body-surface areas.'},
+    abdomen:{preferred:'Hydrocortisone 1–2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% or age-appropriate low-potency prescription if clearly needed', duration:'3–7 days', quantity:'15–30 g', note:'Large-area treatment increases systemic exposure risk in infants.'},
+    'upper-back':{preferred:'Hydrocortisone 1–2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% if age-appropriate and needed', duration:'3–7 days', quantity:'15–30 g', note:'Use low potency and reassess early.'},
+    'lower-back':{preferred:'Hydrocortisone 1–2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% if age-appropriate and needed', duration:'3–7 days', quantity:'15–30 g', note:'Keep therapy out of occluded diaper/fold areas unless specifically intended.'},
+    axillae:{preferred:'Hydrocortisone 1% cream', mild:'Hydrocortisone 1%', strong:'Do not routinely escalate', duration:'2–5 days', quantity:'15 g', note:'Occlusion markedly increases absorption in infant folds.'},
+    'upper-arm':{preferred:'Hydrocortisone 1–2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% if age-appropriate and needed', duration:'3–7 days', quantity:'15–30 g', note:'Low potency is the default in infants.'},
+    forearm:{preferred:'Hydrocortisone 1–2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% if age-appropriate and needed', duration:'3–7 days', quantity:'15–30 g', note:'Avoid routine mid/high potency therapy.'},
+    'hand-palm':{preferred:'Hydrocortisone 2.5% ointment', mild:'Hydrocortisone 1%', strong:'Clinician-directed escalation only; verify age-specific labeling', duration:'3–7 days', quantity:'15 g', note:'Even thick infant sites should not automatically trigger potent/ultrapotent therapy.'},
+    'hand-dorsum':{preferred:'Hydrocortisone 1–2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% if age-appropriate', duration:'3–7 days', quantity:'15 g', note:'Use low potency.'},
+    groin:{preferred:'Hydrocortisone 1% cream', mild:'Hydrocortisone 1%', strong:'No empiric escalation', duration:'2–3 days', quantity:'15 g', note:'Diaper/genital skin is occluded and highly absorptive. Rule out candidiasis and avoid prolonged corticosteroid use.'},
+    antecubital:{preferred:'Hydrocortisone 1% ointment', mild:'Hydrocortisone 1%', strong:'Hydrocortisone 2.5% briefly if clearly needed', duration:'3–5 days', quantity:'15 g', note:'Use low potency in infant flexures.'},
+    thigh:{preferred:'Hydrocortisone 1–2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% if age-appropriate and needed', duration:'3–7 days', quantity:'15–30 g', note:'Use lower potency near the diaper/inguinal fold.'},
+    popliteal:{preferred:'Hydrocortisone 1% ointment', mild:'Hydrocortisone 1%', strong:'Hydrocortisone 2.5% briefly if clearly needed', duration:'3–5 days', quantity:'15 g', note:'Use low potency in flexures.'},
+    'lower-leg':{preferred:'Hydrocortisone 1–2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% if age-appropriate and needed', duration:'3–7 days', quantity:'15–30 g', note:'Use low potency and reassess early.'},
+    'foot-sole':{preferred:'Hydrocortisone 2.5% ointment', mild:'Hydrocortisone 1%', strong:'Clinician-directed escalation only; verify age-specific labeling', duration:'3–7 days', quantity:'15 g', note:'Do not automatically use potent/ultrapotent steroids on infant soles.'},
+    'foot-dorsum':{preferred:'Hydrocortisone 1–2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% if age-appropriate', duration:'3–7 days', quantity:'15 g', note:'Low potency; avoid toe webs unless diagnosis is clear.'},
+    gluteal:{preferred:'Hydrocortisone 1–2.5% ointment', mild:'Hydrocortisone 1%', strong:'Desonide 0.05% if age-appropriate and needed', duration:'3–7 days', quantity:'15–30 g', note:'Treat the diaper/intergluteal region more conservatively than the outer buttock.'}
+  }
+};
+
+
+const SENSITIVE_SITES = new Set(['face','eyelids','neck','axillae','groin','antecubital','popliteal']);
+const THICK_SITES = new Set(['scalp','hand-palm','foot-sole']);
+
+function diagnosisPlan(diagnosis, age, severity, site) {
+  const sensitive = SENSITIVE_SITES.has(selectedRegion);
+  const thick = THICK_SITES.has(selectedRegion);
+  const pediatric = age === 'child' || age === 'infant';
+
+  let preferred = adjustedChoice(site, severity, age, diagnosis);
+  let steroid = preferred;
+  let alternative = '';
+  let adjunct = '';
+  let duration = site.duration;
+  let primaryIsSteroid = true;
+  let quantityOverride = null;
+
+  if (diagnosis === 'eczema') {
+    if (sensitive) {
+      steroid = age === 'infant' ? 'Hydrocortisone 1% ointment' :
+                age === 'child' ? 'Hydrocortisone 1–2.5% or desonide 0.05%' :
+                (selectedRegion === 'eyelids' ? 'Hydrocortisone 1% ointment' : 'Desonide 0.05%');
+      preferred = steroid;
+      alternative = pediatric
+        ? 'Tacrolimus/pimecrolimus when age-appropriate for recurrent sensitive-site disease'
+        : 'Tacrolimus or pimecrolimus for recurrent face/fold disease; other approved nonsteroidal AD topicals can also be considered';
+      duration = age === 'infant' ? '3–5 days' : '5–10 days';
+    } else {
+      alternative = pediatric
+        ? 'Moisturizer maintenance; consider an age-appropriate nonsteroidal topical for frequent recurrence'
+        : 'Moisturizer maintenance; consider tacrolimus/pimecrolimus, crisaborole, ruxolitinib, or another approved nonsteroidal AD topical when appropriate';
+    }
+    adjunct = 'Daily bland emollient; recurrent disease should have a maintenance plan rather than prolonged continuous steroid use.';
+  }
+
+  if (diagnosis === 'contact') {
+    if (sensitive) {
+      preferred = steroid = age === 'adult' ? 'Desonide 0.05% cream or ointment' : 'Hydrocortisone 1–2.5%';
+      duration = pediatric ? '3–7 days' : '5–10 days';
+    } else if (severity === 'severe' && !pediatric) {
+      preferred = steroid = 'Fluocinonide 0.05% cream or ointment';
+      duration = '7–14 days';
+    } else if (!pediatric) {
+      preferred = steroid = 'Triamcinolone 0.1% cream or ointment';
+      duration = '7–14 days';
+    }
+    alternative = 'No topical medication substitutes for identifying and avoiding the allergen/irritant.';
+    adjunct = 'Barrier protection and allergen/irritant avoidance; consider patch testing for recurrent or unexplained allergic contact dermatitis.';
+  }
+
+  if (diagnosis === 'psoriasis') {
+    if (sensitive) {
+      preferred = steroid = age === 'adult' ? 'Hydrocortisone 2.5% or desonide 0.05%' : 'Hydrocortisone 1–2.5%';
+      duration = pediatric ? '3–7 days' : '5–14 days';
+      alternative = pediatric
+        ? 'Consider a steroid-sparing topical when age-appropriate; persistent facial/genital psoriasis merits dermatology input'
+        : 'Calcineurin inhibitor (off-label on sensitive sites) or an approved nonsteroidal psoriasis topical such as roflumilast/tapinarof when appropriate';
+    } else if (thick && !pediatric) {
+      preferred = steroid = 'Clobetasol 0.05% (vehicle matched to site)';
+      duration = '1–2 weeks';
+      alternative = 'Vitamin D analog (for example calcipotriene), a fixed steroid/vitamin-D combination, or a nonsteroidal psoriasis topical for ongoing control.';
+    } else if (!pediatric) {
+      preferred = steroid = severity === 'mild' ? 'Triamcinolone 0.1%' : 'Fluocinonide 0.05%';
+      duration = '1–2 weeks';
+      alternative = 'Vitamin D analog, fixed steroid/vitamin-D combination, tapinarof, or roflumilast when appropriate.';
+    } else {
+      alternative = 'Consider an age-appropriate vitamin-D analog or other pediatric psoriasis therapy; persistent disease merits dermatology input.';
+    }
+    adjunct = 'Psoriasis often benefits from maintenance or combination therapy rather than repeated steroid-only courses.';
+  }
+
+  if (diagnosis === 'sebderm') {
+    primaryIsSteroid = false;
+    if (selectedRegion === 'scalp') {
+      preferred = 'Ketoconazole 2% shampoo';
+      steroid = age === 'adult'
+        ? 'Fluocinolone 0.01% solution/oil or fluocinonide solution briefly for a marked inflammatory flare'
+        : 'Low-potency, age-appropriate scalp corticosteroid briefly if markedly inflamed';
+      alternative = 'Ciclopirox shampoo is an antifungal alternative.';
+      adjunct = 'Use antifungal shampoo as the disease-directed therapy; steroid is short-term rescue for inflammation.';
+      duration = 'Antifungal 2–3×/week initially; steroid rescue only for a brief flare';
+      quantityOverride = {value:'120 mL', course:'1 standard bottle'};
+    } else {
+      preferred = 'Ketoconazole 2% cream';
+      steroid = sensitive ? 'Hydrocortisone 1–2.5% or desonide 0.05% briefly' : 'Low- to mid-potency steroid briefly if very inflamed';
+      alternative = sensitive
+        ? 'Tacrolimus/pimecrolimus can be useful steroid-sparing options for recurrent facial disease'
+        : 'Ciclopirox cream is another antifungal option.';
+      adjunct = 'Antifungal therapy treats the Malassezia-associated component; avoid corticosteroid monotherapy as maintenance.';
+      duration = 'Antifungal usually 2–4 weeks; steroid only for a short inflammatory flare';
+      quantityOverride = {value:'30 g', course:'~15–30 g depending on area'};
+    }
+  }
+
+  if (diagnosis === 'lichen') {
+    if (sensitive) {
+      preferred = steroid = pediatric ? 'Low-potency corticosteroid; confirm diagnosis before escalating' : 'Desonide 0.05% or hydrocortisone 2.5% initially';
+      alternative = 'Persistent lichenification on a sensitive site warrants diagnosis-specific management rather than empiric high-potency therapy.';
+      duration = pediatric ? '3–7 days' : '7–14 days';
+    } else if (!pediatric) {
+      preferred = steroid = thick ? 'Clobetasol 0.05% ointment' : 'Fluocinonide 0.05% ointment';
+      duration = '1–2 weeks, then reassess';
+      alternative = 'Address the itch-scratch trigger; steroid-sparing therapy depends on the underlying diagnosis.';
+    }
+    adjunct = 'Occlusion markedly increases potency and should only be used intentionally.';
+  }
+
+  if (diagnosis === 'bite') {
+    if (sensitive) {
+      preferred = steroid = pediatric ? 'Hydrocortisone 1%' : 'Hydrocortisone 2.5%';
+    } else {
+      preferred = steroid = age === 'adult' ? 'Triamcinolone 0.1% cream' : 'Hydrocortisone 1–2.5% or triamcinolone 0.025%';
+    }
+    duration = pediatric ? '3–5 days' : '3–7 days';
+    alternative = 'Oral nonsedating antihistamine may help itch; topical pramoxine can be used for symptomatic relief when appropriate.';
+    adjunct = 'A simple arthropod reaction should improve quickly; an atypical course should prompt reassessment rather than potency escalation.';
+  }
+
+  return {preferred, steroid, alternative, adjunct, duration, primaryIsSteroid, quantityOverride};
+}
+
+
+const DIAGNOSIS_NOTES = {
+  eczema:'Typical inflammatory dermatitis pathway.',
+  contact:'Confirm and remove the trigger when possible; treatment fails if exposure continues.',
+  psoriasis:'Thicker plaques may justify the stronger option on steroid-tolerant sites. Facial/flexural/genital psoriasis should remain conservative.',
+  sebderm:'Treat yeast-driven disease as well; on face/folds, use low-potency steroid only for short inflammatory flares.',
+  lichen:'Thick lichenified plaques on trunk/extremities may justify a stronger short course; do not extrapolate that rule to thin or intertriginous skin.',
+  bite:'Use only on a clearly inflammatory, noninfected localized reaction.',
+  unsure:'Do not escalate empirically. Establish the diagnosis or obtain dermatology input.'
+};
+
+
 // ═══════════════════════════════════════
 //  STATE
 // ═══════════════════════════════════════
@@ -856,6 +1198,12 @@ function init() {
   bindRegions();
   buildFullTable();
   bindTableSearch();
+  ['diagnosis-select','severity-select','extent-select','age-select'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', () => {
+      if (selectedRegion) renderDecision(REGIONS[selectedRegion]);
+    });
+  });
 }
 
 function buildFullTable() {
@@ -955,64 +1303,110 @@ function selectRegion(regionKey, clickedEl) {
   const region = REGIONS[regionKey];
   if (!region) return;
 
-  // Highlight
   document.querySelectorAll('.body-region.selected').forEach(el => el.classList.remove('selected'));
-  // Highlight all elements with same data-region
   document.querySelectorAll(`[data-region="${regionKey}"]`).forEach(el => el.classList.add('selected'));
 
   selectedRegion = regionKey;
-  renderRegionPanel(region);
-  renderTaperPanel(region);
-}
-
-function renderRegionPanel(region) {
-  const cls = region.maxClass;
-  const classData = CLASSES[cls];
-
   document.getElementById('welcome-card').style.display = 'none';
-  const card = document.getElementById('region-card');
-  card.style.display = 'block';
-
+  document.getElementById('region-card').style.display = 'block';
   document.getElementById('rc-name').textContent = region.name;
-
-  // Steroid names only
-  const list = document.getElementById('rc-steroid-list');
-  list.innerHTML = '';
-  classData.examples.forEach(ex => {
-    const li = document.createElement('li');
-    li.textContent = ex.name;
-    list.appendChild(li);
-  });
+  renderDecision(region);
 }
 
-function renderTaperPanel(region) {
-  const cls = region.maxClass;
-  const classData = CLASSES[cls];
+function adjustedChoice(site, severity, age, diagnosis) {
+  let preferred = site.preferred;
+  if (severity === 'mild') preferred = site.mild;
+  if (severity === 'severe') preferred = site.strong;
 
-  const card = document.getElementById('taper-card');
-  card.style.display = 'block';
+  if (age === 'elderly' && severity !== 'severe') preferred = site.mild;
+  if (diagnosis === 'sebderm' && ['face','eyelids','axillae','groin'].includes(selectedRegion)) preferred = site.mild;
+  return preferred;
+}
 
-  document.getElementById('taper-subtitle').textContent =
-    region.name + ' — Class ' + romanize(cls) + ' (' + CLASS_LABELS[cls] + ')';
+function renderDecision(region) {
+  const diagnosis = document.getElementById('diagnosis-select').value;
+  const severity = document.getElementById('severity-select').value;
+  const extent = Number(document.getElementById('extent-select').value);
+  const age = document.getElementById('age-select').value;
 
-  // Steps
-  const stepsContainer = document.getElementById('taper-steps');
-  stepsContainer.innerHTML = '';
-  classData.steps.forEach((step, i) => {
-    const div = document.createElement('div');
-    div.className = 'taper-step';
-    div.innerHTML = `
-      <div class="ts-left">
-        <div class="ts-dot" style="background:${CLASS_COLORS[step.cls]}">${i+1}</div>
-        <div class="ts-line"></div>
+  const adultSite = SITE_RX[selectedRegion];
+  const pediatricSet = PEDIATRIC_RX[age];
+  const site = pediatricSet && pediatricSet[selectedRegion] ? pediatricSet[selectedRegion] : adultSite;
+  if (!site) return;
+  const rx = document.getElementById('rx-output');
+  const risk = document.getElementById('site-risk-pill');
+  const plan = diagnosisPlan(diagnosis, age, severity, site);
+
+  if (age === 'child') risk.textContent = 'Pediatric mode · more conservative';
+  else if (age === 'infant') risk.textContent = 'Infant mode · highest caution';
+  else risk.textContent = (site.risk || adultSite.risk) + ' absorption / sensitivity';
+
+  if (diagnosis === 'unsure') {
+    rx.innerHTML = `<div class="no-rx"><strong>No empiric escalation recommendation.</strong><br>
+      When the diagnosis is uncertain, avoid using potency as a diagnostic test. Consider tinea, scabies,
+      bacterial infection, HSV/zoster, acne/rosacea/perioral dermatitis, drug eruption, and other mimics.
+      If treatment is still necessary, use the lowest reasonable potency for the shortest course while arranging reassessment.</div>`;
+    return;
+  }
+
+  const preferred = plan.preferred;
+  const sigFreq = (age === 'child' || age === 'infant')
+    ? 'once daily; increase to twice daily only if clinically necessary'
+    : ((selectedRegion === 'eyelids') ? 'once to twice daily' : 'twice daily');
+  const frequencyPerDay = (age === 'child' || age === 'infant') ? 1 : 2;
+  const quantitySite = {...site, duration: plan.duration};
+  const q = quantityEstimate(quantitySite, age, extent, frequencyPerDay);
+  const extentLabel = document.getElementById('extent-select').selectedOptions[0].textContent;
+  const safeSiteWarning = ['face','eyelids','axillae','groin','antecubital','popliteal','neck'].includes(selectedRegion)
+    ? 'Do not extend duration or increase potency without reassessing.'
+    : 'Stop when clear; do not continue simply to finish the prescribed duration.';
+
+
+  const pediatricBanner = age === 'child'
+    ? `<div class="peds-banner"><strong>Pediatric pathway:</strong> lower potency, shorter course, earlier reassessment.</div>`
+    : age === 'infant'
+    ? `<div class="peds-banner"><strong>Infant/toddler pathway:</strong> use only low-potency or age-appropriate products for short courses.</div>`
+    : '';
+
+  rx.innerHTML = `${pediatricBanner}
+    <div class="rx-card">
+      <div class="rx-kicker">Preferred treatment for this diagnosis</div>
+      <div class="rx-drug">${preferred}</div>
+      <div class="rx-line">${plan.primaryIsSteroid
+        ? `<strong>Suggested steroid sig:</strong> Apply a thin layer to affected skin ${sigFreq} for ${plan.duration}, or until clear/nearly clear, whichever comes first. ${safeSiteWarning}`
+        : `<strong>Disease-directed plan:</strong> ${plan.duration}. Use the corticosteroid listed below only as short-term anti-inflammatory rescue when needed.`}</div>
+      <div class="rx-meta">
+        <div class="rx-meta-item"><div class="rx-meta-label">Recommended dispense</div><div class="rx-meta-value">${plan.quantityOverride ? plan.quantityOverride.value : q.dispense + ' g'}</div></div>
+        <div class="rx-meta-item"><div class="rx-meta-label">Preferred vehicle</div><div class="rx-meta-value">${site.vehicle}</div></div>
+        <div class="rx-meta-item"><div class="rx-meta-label">Reassess</div><div class="rx-meta-value">If not clearly improving in 1–2 weeks</div></div>
       </div>
-      <div class="ts-content">
-        <div class="ts-week">${step.week}</div>
-        <div class="ts-action">${step.action}</div>
-      </div>`;
-    stepsContainer.appendChild(div);
-  });
+    </div>
+    <div class="quantity-card">
+      <div class="quantity-title">Quantity calculator</div>
+      <div class="quantity-main">
+        <div class="quantity-number"><div class="q-label">Estimated course use</div><div class="q-value">${plan.quantityOverride ? plan.quantityOverride.course : '~' + (q.course < 10 ? q.course.toFixed(1) : Math.round(q.course)) + ' g'}</div></div>
+        <div class="quantity-number"><div class="q-label">Write prescription for</div><div class="q-value">${plan.quantityOverride ? plan.quantityOverride.value : q.dispense + ' g'}</div></div>
+      </div>
+      <div class="quantity-explain">
+        ${plan.quantityOverride
+          ? 'Package-based suggestion for this primary treatment; confirm formulation and actual treatment area.'
+          : `${extentLabel} · ~${q.days} days · ${frequencyPerDay === 1 ? 'once daily' : 'twice daily'} · ~${q.perApplication.toFixed(2)} g/application. Dispense is rounded up to a practical tube size.`}
+      </div>
+    </div>
+    <div class="dx-plan">
+      <div class="dx-row"><div class="dx-label">${plan.primaryIsSteroid ? 'Steroid choice' : 'Steroid rescue'}</div><div class="dx-value">${plan.steroid}</div></div>
+      ${plan.alternative ? `<div class="dx-row"><div class="dx-label">Non-steroidal / alternative</div><div class="dx-value">${plan.alternative}</div></div>` : ''}
+      ${plan.adjunct ? `<div class="dx-row"><div class="dx-label">Adjunct / maintenance</div><div class="dx-value">${plan.adjunct}</div></div>` : ''}
+    </div>
+    <div class="site-note"><strong>Site note:</strong> ${site.note}</div>
+    ${(age === 'child' || age === 'infant') ? `<details class="compact-details"><summary>Pediatric safety details</summary><div><strong>Pediatric safety:</strong> children have a higher surface-area-to-body-mass ratio and may be more susceptible to systemic corticosteroid effects. Avoid occlusion unless specifically directed, avoid prolonged large-area treatment, and verify age-specific FDA labeling for potent products.</div></details>` : ''}
+    <details class="compact-details">
+      <summary>How was this quantity estimated?</summary>
+      <div>One adult fingertip unit (FTU) is approximately 0.5 g and covers about two adult handprint-sized areas. Pediatric estimates are scaled downward. Use this as an aid and still confirm the actual treatment area, frequency, package size, and age-specific labeling.</div>
+    </details>
+  `;
 }
+
 
 // ═══════════════════════════════════════
 //  START
